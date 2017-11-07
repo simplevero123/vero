@@ -1,0 +1,50 @@
+this is how I synchronized my files from my mac to github.
+
+1. I created a new repository called “vero”
+
+2. I went to the mac terminal and typed git clone and pasted the link of my repository. This created a repository folder called “vero” under veronicaramirez users. It contained the readme file that is automatically generated in github when i created the repository.
+
+3. I created a new text editor file and saved it in the “vero” folder file. 
+
+4. Then, still under the vero directory, i typed: git add doc_in_vero_repository.txt to add the text editor file in a staging area, so I can upload it to the github origin branch.
+
+5. I ran git status, which told me: Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   doc_in_vero_repository.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+6. I then typed git commit -m
+ but that gave me this error: switch `m' requires a value
+
+7. Then I typed git commit -m doc_in_vero_repository.txt
+and this is what came out:
+[master f4a2db3] doc_in_vero_repository.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 doc_in_vero_repository.txt
+
+8. I typed git status again to see what if it had worked. This is the output:
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit. (meaning that I submitted a commit on my mac, which needs to be pushed to the origin branch in github.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+
+9. I typed git push -u origin master
+this is what came out:
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/simplevero123/vero.git
+   fb7d710..f4a2db3  master -> master
+Branch master set up to track remote branch master from origin.
+
+10. I went back to github, and the file “doc_in_vero_repository.txt” now shows in the “vero” repository! yay! 
